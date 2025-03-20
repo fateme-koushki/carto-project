@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "yekan-bakh-fa";
+    src: url("../../public/assets/fonts/YekanBakhFaNum-Regular.ttf");
+    font-weight: 100;
+  }
+  
+  body {
+    overflow-x: hidden;
+    font-family: yekan-bakh-fa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+
+.embla {  
+    position: relative;  
+    overflow: hidden;  
+}  
+.embla__viewport {  
+    overflow: hidden;  
+}  
+.embla__container {  
+    display: flex;  
+    user-select: none;  
+    padding: 0;  
+}  
+.embla__slide {  
+    min-width: 100%; /* هر اسلاید تمام عرض را پوشش می‌دهد */  
+    position: relative;  
+    text-align: center;  
+}  

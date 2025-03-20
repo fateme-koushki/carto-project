@@ -1,0 +1,62 @@
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto; /* مرکز کردن */
+  direction: rtl;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  direction: rtl;
+}
+
+.embla__slide {
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  flex: 0 0 calc(25% - 15px); /* هر اسلاید 25% از عرض کانتینر باشد */
+  min-width: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1px;
+  text-align: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* انیمیشن هاور */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .embla__slide {
+    text-align: center;
+    flex: 0 0 calc(33.33% - 15px); /* 3 محصول در ردیف */
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .embla__slide {
+    text-align: center;
+
+
+    flex: 0 0 calc(50% - 15px); /* 2 محصول در ردیف */
+  }
+}
+
+@media (max-width: 480px) {
+  .embla__slide {
+    text-align: center;
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center; /* 1 محصول در ردیف */
+  }
+}
+
+
+
+
