@@ -1,5 +1,4 @@
 "use client";
-import { useStorage } from "@/app/providers/context/userInfo";
 import Link from "next/link";
 import React, {  useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -7,7 +6,6 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { LuShoppingCart } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 export default function Head() {
-  const { userInfo, clearStorage } = useStorage();
   const [open, setOpen] = useState(false);
   
  
@@ -25,17 +23,7 @@ export default function Head() {
           <div className="flex justify-end ">
             <IoClose onClick={() => setOpen(!open)} size={20} />
           </div>
-          {userInfo?.data?.token && (
-            <div className="flex gap-4 items-center">
-              
-              <div className="img-user w-16 h-16 rounded-full bg-blue-300"></div>
-              <div className="flex flex-col">
-                <span>{userInfo?.data?.data?.username}</span>
-                <span>{userInfo?.data?.data?.email}</span>
-              </div>
-              {/* <span onClick={()=> clearStorage()}>خروج</span>  */}
-            </div>
-          )}
+          
           <div className="  flex flex-col gap-6  text-black text-lg font-bold mt-4 ">
             <Link onClick={()=>setOpen(!open) } className="ml-4" href={"/"}>
               خانه
@@ -51,16 +39,7 @@ export default function Head() {
               ارتباط با ما
             </Link>
           </div>
-          {!userInfo?.data?.token &&
-            <div className="flex flex-col justify-center items-center gap-4 text-center mt-12" >
-              <Link onClick={()=>setOpen(!open)} href={"/"} className="border flex justify-center items-center  text-xl border-primary w-full h-12 rounded-lg bg-primary text-slate-50">
-                ثبت نام
-              </Link>
-              <Link onClick={()=>setOpen(!open)} href={"/"} className="border text-center flex justify-center items-center  text-xl border-primary w-full h-12 rounded-lg text-primary">
-                ورود
-              </Link>
-            </div>
-          }
+          
         </div>
           {/* desktop */}
         <div className="w-full md:w-[90%] text-center mt-3 h-10 flex justify-between items-center !bg-white   rounded-lg  md:top-4  md:p-6 ">
@@ -103,29 +82,23 @@ export default function Head() {
 
         
           <div className="hidden md:flex gap-3 ">
-              {userInfo?.data?.token ? (
-                <div className="flex gap-2">
-                  {" "}
-                  <div className="border border-primary w-16 h-8 rounded-lg bg-primary text-slate-50 text-[12px]">{userInfo?.data?.data?.username}</div>{" "}
-                  <div className="border border-primary w-16 h-8 rounded-lg text-primary" onClick={() => clearStorage()}>خروج</div>{" "}
-                </div>
-              ) : (
+              
                 <>
                   
                   <Link
-                    href={"/login"}
+                    href={"/"}
                     className="border flex justify-center items-center  hover:bg-primary hover:text-white border-primary w-12 lg:w-16 h-8 text-sm lg:text-base rounded-lg text-primary"
                   >
                     ورود
                   </Link>
                   <Link
-                    href={"/register"}
+                    href={"/"}
                     className="border flex justify-center items-center border-primary w-12 lg:w-16 h-8 rounded-lg bg-primary whitespace-nowrap text-sm lg:text-base text-slate-50"
                   >
                     ثبت نام
                   </Link>
                 </>
-              )}
+            
             </div>
         </div>
       </div>

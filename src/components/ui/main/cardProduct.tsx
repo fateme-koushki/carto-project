@@ -3,9 +3,19 @@ import React from 'react'
 import { MdOutlineReportGmailerrorred } from "react-icons/md";
 import { LuShoppingCart } from "react-icons/lu";
 import { BiHeart } from "react-icons/bi";
+export type PruductType = {
+  product:{
+    name:string ,
+    img:string ,
+    id:number ,
+    price:string ,
+    discount : string
+  }
 
-export default function Product({product}:any) {
-  const truncateString = (str) => {
+
+}
+export default function Product({product}:PruductType) {
+  const truncateString = (str:string) => {
     return str.length > 20 ? str.slice(0, 20) + "..." : str;
   };
  

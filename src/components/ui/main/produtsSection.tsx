@@ -2,14 +2,13 @@
 import React from 'react'
 import Product from './cardProduct'
 import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
 import "./embla.css"
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md'
-export default function ProdutsSection({products }) {
+import { ProductsProps } from '@/components/home/specialOffers/offersProduct'
+export default function ProdutsSection({products }:ProductsProps) {
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, direction: "rtl" },
-    [Autoplay({ delay: 3000 })]
+    { loop: true, direction: "rtl" }
   );
 
  

@@ -1,7 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
+type Props  ={
+  title : string ,
+  disc:string ,
+  img:string
 
-export default  function BenefitsUi({title , disc , img }) {
+}
+export default  function BenefitsUi({title , disc , img }:Props) {
   return (
     <div className='relative mt-20 md:mt-32 lg:mt-20' >
     <Image src={img} alt='img' width={250} height={250}  className='absolute z-30 left-2 md:left-[-80px] md:top-[-111px] lg:left-[-130px] top-[-65px] lg:top-[20px]'/>
