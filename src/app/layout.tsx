@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import {Roboto} from "next/font/google";
 import "./globals.css";
 import AuthProvider from "@/app/providers/AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
 import ReactQueryProvider from "./providers/Reactquery/QueryProvider";
 import Head from "@/components/Head/Head";
-import { StorageProvider } from "./providers/context/userInfo";
 import "../styles/global.css"
 
 export const metadata: Metadata = {
@@ -23,14 +21,12 @@ export default function RootLayout({
       <body
         
       >
-        <StorageProvider>
         <ReactQueryProvider>
         <AuthProvider>
           <Head />
         {children}
         </AuthProvider>
         </ReactQueryProvider>
-        </StorageProvider>
       </body>
     </html>
   );

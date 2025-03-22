@@ -1,20 +1,13 @@
 import React from 'react'
 import { MdKeyboardArrowRight } from "react-icons/md";
-import phone1 from "../../../../public/assets/phone1.png";
-import phone2 from "../../../../public/assets/phone2.png";
-import phone3 from "../../../../public/assets/phone3.png";
-import phone4 from "../../../../public/assets/phone4.png";
-import phone5 from "../../../../public/assets/phone5.png";
-import phone6 from "../../../../public/assets/phone6.png";
-import Product from '@/components/ui/main/cardProduct';
-import ProdutsOffers from './offersProduct';
-import ProdutsSection from '@/components/ui/main/produtsSection';
+
+import ProdutsOffers, { Product } from './offersProduct';
 import Link from 'next/link';
 export default  function SpecialOffers() {
-  const specialProducts = [
+  const specialProducts:Product[] = [
     {name : "آیفون 14 پلاس"  ,img : "/assets/phone1.png" , id:1 ,price : "1000000000" , discount : "10"},
     {name : "آیفون 14 پلاس"  ,img : "/assets/phone2.png" , id:2 ,price : "9000000000" , discount : "15"},
-    {name : "آیفون 14 پلاس"  ,img: "/assets/phone3.png" , price : "9000000000", discount : "10"},
+    {name : "آیفون 14 پلاس"  ,img: "/assets/phone3.png"  , id:2 ,price : "9000000000", discount : "10"},
     {name : "آیفون 14 پلاس"  ,img : "/assets/phone4.png" , id:4 ,price : "9000000000" , discount : "15"},
     // {name : "iphone"  ,img : {phone5} , id:5 ,price : "1000000000" , discount : "15"},
     // {name : "iphone"  ,img : {phone6} , id:6 ,price : "9000000000" , discount : "10"}

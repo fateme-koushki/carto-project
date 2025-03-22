@@ -3,10 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-
+interface Category {  
+    name: string;  
+    icon: string;  
+}
 
 export default  function Categories() {
-    const catrgories:object[] = [
+    const catrgories:Category[] = [
         {name : "گوشی ها" , icon :"/categories/phone.svg"},
         {name : " ایرپادها" , icon : "/categories/airpods.svg"},
         {name : "ساعت هوشمند" , icon:"/categories/smart-watch.svg"},

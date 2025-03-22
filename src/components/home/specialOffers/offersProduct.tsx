@@ -5,7 +5,18 @@ import Autoplay from 'embla-carousel-autoplay'
 import "../../ui/main/embla.css" ;
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import Product from '@/components/ui/main/cardProduct'
-export default function ProdutsOffers({products }) {
+
+export type Product = {
+    name:string ,
+    img:string ,
+    id:number ,
+    price:string ,
+    discount : string
+}
+export interface ProductsProps {  
+  products: Product[];  
+  }
+export default function ProdutsOffers({products}:ProductsProps) {
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, direction: "rtl" },
