@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"  dir="rtl">
+      <head>
+      <link rel="icon" type="image/png" href="./carto.jpeg"  />
+      </head>
       <body
         
       >
