@@ -39,7 +39,14 @@ export default function Head() {
               ارتباط با ما
             </Link>
           </div>
-          
+          <div className="flex flex-col justify-center items-center gap-4 text-center mt-12" >
+              <Link onClick={()=>setOpen(!open)} href={"/"} className="border flex justify-center items-center  text-xl border-primary w-full h-12 rounded-lg bg-primary text-slate-50">
+                ثبت نام
+              </Link>
+              <Link onClick={()=>setOpen(!open)} href={"/"} className="border text-center flex justify-center items-center  text-xl border-primary w-full h-12 rounded-lg text-primary">
+                ورود
+              </Link>
+            </div>
         </div>
           {/* desktop */}
         <div className="w-full md:w-[90%] text-center mt-3 h-10 flex justify-between items-center !bg-white   rounded-lg  md:top-4  md:p-6 ">
