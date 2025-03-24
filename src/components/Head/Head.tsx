@@ -14,10 +14,10 @@ export default function Head() {
 
   return (
     <div className="flex justify-center ">
-      <div className=" flex justify-center relative z-40 md:fixed w-full md:w-[88%]  h-10 mx-auto ">
+      <div className=" flex justify-center relative z-50 md:fixed w-full md:w-[88%]  h-10 mx-auto ">
       {/* mobile  */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in   ${open ? "translate-x-[0px]" : "translate-x-[800px]"
+          className={`md:hidden transition-all duration-300   ease-in   ${open ? "translate-x-[0px]" : "translate-x-[800px]"
             } bg-[#F6F7F9] p-4  z-50 absolute h-[100vh]  w-full  `}
         >
           <div className="flex justify-end ">
@@ -49,7 +49,7 @@ export default function Head() {
             </div>
         </div>
           {/* desktop */}
-        <div className="w-full md:w-[90%] text-center mt-3 h-10 flex justify-between items-center !bg-white   rounded-lg  md:top-4  md:p-6 ">
+        <div className="w-full md:w-[90%] text-center mt-3 h-10 flex justify-between items-center !bg-white  overflow-x-hidden  rounded-lg  md:top-4  md:p-6 ">
         <div className="mx-2 flex md:hidden items-center gap-2  ">
           
             <AiOutlineMenu

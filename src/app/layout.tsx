@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
       <link rel="icon" type="image/png" href="./carto.jpeg"  />
       </head>
-      <body
+      <body className="box-content overflow-y-auto"
         
       >
         <ReactQueryProvider>
