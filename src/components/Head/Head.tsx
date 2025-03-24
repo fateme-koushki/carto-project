@@ -18,13 +18,13 @@ export default function Head() {
       {/* mobile  */}
         <div
           className={`md:hidden transition-all duration-300   ease-in   ${open ? "translate-x-[0px]" : "translate-x-[800px]"
-            } bg-[#F6F7F9] p-4  z-50 absolute h-[100vh]  w-full  `}
+            } bg-[#F6F7F9] p-4  z-50 absolute h-screen  w-full  `}
         >
           <div className="flex justify-end ">
             <IoClose onClick={() => setOpen(!open)} size={20} />
           </div>
           
-          <div className="  flex flex-col gap-6  text-black text-lg font-bold mt-4 ">
+          <div className="  flex flex-col gap-6  items-start text-black text-lg font-bold mt-4 ">
             <Link onClick={()=>setOpen(!open) } className="ml-4" href={"/"}>
               خانه
             </Link>
@@ -49,7 +49,7 @@ export default function Head() {
             </div>
         </div>
           {/* desktop */}
-        <div className="w-full md:w-[90%] text-center mt-3 h-10 flex justify-between items-center !bg-white  overflow-x-hidden  rounded-lg  md:top-4  md:p-6 ">
+        <div className="w-full md:w-[90%] text-center md:mt-3 h-10 flex justify-between items-center !bg-white   overflow-hidden rounded-lg  md:top-4  md:p-6 ">
         <div className="mx-2 flex md:hidden items-center gap-2  ">
           
             <AiOutlineMenu
