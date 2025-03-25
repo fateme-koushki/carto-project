@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en"  dir="rtl">
       <head>
-      <link rel="icon" type="image/png" href="./cartoLogo.png"  />
+      <link rel="icon" type="image/png" href="./logoCartoo.png"   />
       </head>
       <body className="box-content "
         
