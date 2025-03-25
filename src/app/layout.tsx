@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ReactQueryProvider from "./providers/Reactquery/QueryProvider";
 import Head from "@/components/Head/Head";
 import "../styles/global.css"
+import Footer from "@/components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Carto App",
@@ -19,14 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en"  dir="rtl">
       <head>
-      <link rel="icon" type="image/png" href="./carto.jpeg"  />
+      <link rel="icon" type="image/png" href="./logoCartoo.png"   />
       </head>
-      <body
+      <body className="box-content "
         
       >
         <ReactQueryProvider>
         <AuthProvider>
-          <Head />
         {children}
         </AuthProvider>
         </ReactQueryProvider>

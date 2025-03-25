@@ -8,11 +8,13 @@ import NewProdcuts from './newProducts/newProdcuts'
 import BenefitsSection from './benefitsSection/benefitsSection'
 import FlashSaleBanner from './flashSaleBanner/FlashsaleBanner'
 import Footer from '../footer/footer'
+import Head from '../Head/Head'
 
 
 export default function HomePage() {
   return (
     <div className=''>
+      <Head/>
         <Header />
         <Categories />
         <SpecialOffers />

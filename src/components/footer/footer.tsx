@@ -14,7 +14,7 @@ import { FiYoutube } from "react-icons/fi"
 import { FaFacebookF } from "react-icons/fa";
 function Footer() {
   return (
-    <div className="h-full w-full p-2 flex flex-col justify-between items-center cursor-text">
+    <div className="  w-full p-2 flex flex-col justify-between items-center cursor-text">
       <section className="flex flex-col  md:flex-row justify-around items-center w-full">
         <Image alt="img" src={apple} width={70} height={70} />
         <Image alt="img" src={samsung} width={100} height={100} />
